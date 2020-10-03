@@ -18,7 +18,7 @@ int main(){
         }
         
         if(sum == n){
-            printf("%d\n", i);
+            printf("%ld\n", i);
             return 0;
         }
     }
