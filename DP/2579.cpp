@@ -10,35 +10,23 @@ int main(){
 
     scanf("%d", &n);
 
-    for(int i=2;i<=n+!;i++){
-        int a;
+    for(int i=1;i<=n;i++){
         scanf("%d", &arr[i]);
     }
 
-    int temp = 0;
+    cost[1] = arr[1];
+    cost[2] = arr[1] + arr[2];
+    cost[3] = max(arr[1] + arr[3], arr[2] + arr[3]);
 
-    for(int i=2;i<=n+1;i++){
-        if(i == n && cnt == 3){
-            cost[n] = arr[n] + cost[i-2];
-        } else if (i == n && cnt != 3){
-            cost[i] = arr[i] + max(cost[i-1], cost[i-2]);
-        }
-
-        if(cnt == 3){
-            cnt = 0;
-            cost[i] = arr[i] + cost[i-2];
-        } else{
-            cost[i] = arr[i] + max(cost[i-1], cost[i-2]);
-        }
-    }
-    printf("\n\n");
-
-    for(int i=2;i<=n+1;i++){
-        printf("%d\n", cost[i]);
+    for(int i=4;i<=n;i++){
+        cost[i] = max(cost[i-2] + arr[i], cost[i-3] + arr[i-1] + arr[i]);
     }
 
-    printf("%d\n", max(cost[n+1], cost[n]));
+    // for(int i=1;i<=n;i++){
+    //     printf("%d ", cost[i]);
+    // }
     
+    printf("%d", cost[n]);
 
     return 0;
 }
