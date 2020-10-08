@@ -22,10 +22,6 @@ int main(){
         cost[i] = max(cost[i-2] + arr[i], cost[i-3] + arr[i-1] + arr[i]);
     }
 
-    // for(int i=1;i<=n;i++){
-    //     printf("%d ", cost[i]);
-    // }
-    
     printf("%d", cost[n]);
 
     return 0;
