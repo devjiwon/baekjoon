@@ -2,5 +2,4 @@
 *.dSYM/
 .vscode/
 build/
-Coding TEST/
-.test/
+coding_test/
