@@ -27,8 +27,6 @@ void dfs(int v){
             if(visited[adj[top][i]] == 0) s.push(adj[top][i]);
         }
     }
-
-
 }
 
 int main(){
