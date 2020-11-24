@@ -1,5 +1,6 @@
 *.out
 *.dSYM/
+.gitignore/
 .vscode/
 build/
 coding_test/
