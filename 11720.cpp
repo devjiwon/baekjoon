@@ -18,6 +18,5 @@ int main(){
 
     printf("%ld\n", answer);
 
-
     return 0;
 }

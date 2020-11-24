@@ -27,13 +27,9 @@ int main(){
         } else if(s[i] == 'W' || s[i] == 'X' || s[i] == 'Y' || s[i] == 'Z'){
             sum += 9;
         }
-
-        // cout << s[i] << endl;
-        // cout << sum << endl;
     }
 
     printf("%d\n", sum);
-
 
     return 0;
 }
